@@ -57,7 +57,7 @@ endfunction
 " project.
 function! phoenix#ProjectionistDetect(projections) abort
   if exists('b:phoenix_root')
-    let projections = json_decode(substitute(json_encode(a:projectionist), '<project>', b:phoenix_project, 'g'))
+    let projections = json_decode(substitute(json_encode(a:projections), '<project>', b:phoenix_project, 'g'))
     call projectionist#append(b:phoenix_root, projections)
   endif
 endfunction
