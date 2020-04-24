@@ -6,7 +6,7 @@ License: Same terms as Vim itself (see |license|)
 This plugin is only available if 'compatible' is not set.
 
 =============================================================================
-INTRODUCTION                                     *phoenix* 
+INTRODUCTION                                     *phoenix*
 
 This plugin helps you navigate and develop projects using the Phoenix web
 framework. A Phoenix project is detected by ascending up the directory
@@ -43,25 +43,25 @@ The |projections| plugin can be used to define navigation commands. This
 plugin provides several projections based on Phoenix project layout conventions.
 These include:
 
-:Echannel [name]	Edit a file in {web/channels}
+:Echannel [name]	Edit a file in {lib/<project>_web/channels}
 
-:Econtroller [name]	Edit a file in {web/controllers}
+:Econtroller [name]	Edit a file in {lib/<project>_web/controllers}
 
-:Eview [name]		Edit a file in {web/views}
+:Eview [name]		Edit a file in {lib/<project>_web/views}
 
-:Emodel [name]		Edit a file in {web/models}
+:Etemplate [name]	Edit a file in {lib/<project>_web/templates}
 
-:Etemplate [name]	Edit a file in {web/templates}
+:Erouter		Edit {lib/<project>_web/router.ex}
 
-:Erouter		Edit {web/router.ex}
+:Estylesheet [name]	Edit a file in {assets/css}
 
-:Estylesheet [name]	Edit a file in {web/static/css}
-
-:Ejavascript [name]	Edit a file in {web/static/js}
+:Ejavascript [name]	Edit a file in {assets/js}
 
 :Econfig [name]		Edit a file in {config/}
 
 :Elib [name]		Edit a file in {lib/}
+
+:Etest [name]           Edit a file in {test/}
 
 :Emigration [name]	Edit a file in {priv/repo/mgirations}
 
