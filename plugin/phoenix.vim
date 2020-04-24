@@ -93,7 +93,7 @@ let s:projections = {
   \ "config/*.exs": {
   \   "type": "config"
   \ },
-  \ "lib/*": {
+  \ "lib/*.ex": {
   \   "type": "lib",
   \   "alternate": "test/{}_test.exs",
   \   "template": [
