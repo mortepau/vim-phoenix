@@ -27,51 +27,51 @@ augroup phoenix
 augroup end
 
 let s:projections = {
-  \ "lib/**/channels/*_channel.ex": {
+  \ "lib/<project>_web/channels/*_channel.ex": {
   \   "type": "channel",
-  \   "alternate": "test/{dirname}/channels/{basename}_channel_test.exs",
+  \   "alternate": "test/<project>_web/channels/{basename}_channel_test.exs",
   \   "template": [
   \     "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}Channel do",
   \     "  use {dirname|camelcase|capitalize}, :channel",
   \     "end"
   \   ]
   \ },
-  \ "lib/**/controllers/*_controller.ex": {
+  \ "lib/<project>_web/controllers/*_controller.ex": {
   \   "type": "controller",
-  \   "alternate": "test/{dirname}/controllers/{basename}_controller_test.exs",
+  \   "alternate": "test/<project>_web/controllers/{basename}_controller_test.exs",
   \   "template": [
   \     "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}Controller do",
   \     "  use {dirname|camelcase|capitalize}, :controller",
   \     "end"
   \   ]
   \ },
-  \ "lib/**/views/*_view.ex": {
+  \ "lib/<project>_web/views/*_view.ex": {
   \   "type": "view",
-  \   "alternate": "test/{dirname}/views/{basename}_view_test.exs",
+  \   "alternate": "test/<project>_web/views/{basename}_view_test.exs",
   \   "template": [
   \     "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}View do",
   \     "  use {dirname|camelcase|capitalize}, :view",
   \     "end"
   \   ]
   \ },
-  \ "test/**/channels/*_channel_test.exs": {
-  \   "alternate": "lib/{dirname}/channels/{basename}_channel.ex",
+  \ "test/<project>_web/channels/*_channel_test.exs": {
+  \   "alternate": "lib/<project>_web/channels/{basename}_channel.ex",
   \   "template": [
   \     "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}ChannelTest do",
   \     "  use {dirname|camelcase|capitalize}.ConnCase, async: true",
   \     "end"
   \   ]
   \ },
-  \ "test/**/controllers/*_controller_test.exs": {
-  \   "alternate": "lib/{dirname}/controllers/{basename}_controller.ex",
+  \ "test/<project>_web/controllers/*_controller_test.exs": {
+  \   "alternate": "lib/<project>_web/controllers/{basename}_controller.ex",
   \   "template": [
   \     "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}ControllerTest do",
   \     "  use {dirname|camelcase|capitalize}.ConnCase, async: true",
   \     "end"
   \   ]
   \ },
-  \ "test/**/views/*_view_test.exs": {
-  \   "alternate": "lib/{dirname}/views/{basename}_view.ex",
+  \ "test/<project>_web/views/*_view_test.exs": {
+  \   "alternate": "lib/<project>_web/views/{basename}_view.ex",
   \   "template": [
   \     "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}ViewTest do",
   \     "  use {dirname|camelcase|capitalize}.ConnCase, async: true",
@@ -95,15 +95,15 @@ let s:projections = {
   \ },
   \ "lib/*.ex": {
   \   "type": "lib",
-  \   "alternate": "test/{}_test.exs",
+  \   "alternate": "test/{basename}_test.exs",
   \   "template": [
-  \     "defmodule {camelcase|capitalize|dot} do",
+  \     "defmodule {basename|camelcase|capitalize|dot} do",
   \     "end"
   \   ]
   \ },
   \ "test/*_test.exs": {
   \   "type": "test",
-  \   "alternate": "lib/{}.ex",
+  \   "alternate": "lib/{basename}.ex",
   \   "template": [
   \     "defmodule {camelcase|capitalize|dot}Test do",
   \     "end"
